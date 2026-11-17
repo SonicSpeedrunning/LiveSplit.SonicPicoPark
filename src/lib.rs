@@ -303,7 +303,7 @@ fn split(watchers: &Watchers, settings: &Settings) -> bool {
         && watchers
             .stage_result
             .pair
-            .is_some_and(|val| val.changed_from_to(&0, &1))
+            .is_some_and(|val| val.changed_to(&1))
         && watchers.stage.pair.is_some_and(|val| match val.current {
             101 => settings.level1_1,
             102 => settings.level1_2,
